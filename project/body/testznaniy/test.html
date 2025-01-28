@@ -1,0 +1,211 @@
+<body>
+    <h1 class="header-h1">Тест</h1>
+
+    <div id="quiz">
+        <img id="question-image" src="static/images/re1.png; static/images/note1.png" alt="" style="width: 300px; height: auto;">
+        <div id="question">Какая нота изображена на картинке?</div>
+        <div id="buttons"></div>
+        <button id="finish" onclick="finishTest()" class="hidden">Завершить тест</button>
+        <link rel="stylesheet" href="static/styles/styletest.css">
+        <div id="result" class="hidden"></div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    
+    <script>
+        
+         const questions = [
+            {
+                question: "Какая нота изображена на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ре"
+                
+            },
+            {
+                question: "Какая нота изображена на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ми"
+            },
+            {
+                question: "Какая нота изображена на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ре"
+            },
+            {
+                question: "Какой аккорд изображен на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ре"
+            },
+            {
+                question: "Какой аккорд изображен на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Фа"
+            },
+            {
+                question: "Какой аккорд изображен на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ля"
+            },
+            {
+                question: "Какой аккорд изображен на картинке??",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "Ми"
+            },
+            {
+                question: "Что это за обозначение?",
+                answers: ["Бемоль", "Диез", "Бекар"],
+                correct: "Бемоль"
+            },
+            {
+                question: "Что это за обозначение?",
+                answers: ["Бемоль", "Диез", "Бекар"],
+                correct: "Диез"
+            },
+            {
+                question: "Что произойдет с строем?",
+                answers: ["Повысится", "Понизится", "Ничего"],
+                correct: "Понизится"
+            },
+            {
+                question: "Какая гамма изображена на картинке?",
+                answers: ["До", "Ре", "Ми", "Фа", "Соль", "Ля", "Си"],
+                correct: "До"
+            },
+        
+        ];
+
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+
+        function loadQuestion() {
+            const questionData = questions[currentQuestionIndex];
+            document.getElementById("question").innerText = questionData.question;
+            shuffle(questionData.answers);
+            const buttonsContainer = document.getElementById("buttons");
+            buttonsContainer.innerHTML = '';
+        
+            questionData.answers.forEach((answer) => {
+                const button = document.createElement("button");
+                button.innerText = answer;
+                button.onclick = () => checkAnswer(answer);
+                buttonsContainer.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selected) {
+            const questionData = questions[currentQuestionIndex];
+            if (selected === questionData.correct) {
+                score += 10;
+            }
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("finish").classList.remove("hidden");
+                document.getElementById("buttons").innerHTML = '';
+            }
+        }
+
+        function finishTest() {
+            let rank = "";
+            if (score === 70) {
+                rank = "Тяжело";
+            } else if (score === 40) {
+                rank = "Средне";
+            } else {
+                rank = "Легко";
+            }
+
+            document.getElementById("result").innerText = `Ваш результат: ${score}%. Рекомендуемая сложность: ${rank}`;
+            document.getElementById("result").classList.remove("hidden");
+        }
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>    

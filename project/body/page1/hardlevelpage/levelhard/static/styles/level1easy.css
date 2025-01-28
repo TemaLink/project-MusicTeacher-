@@ -1,0 +1,227 @@
+
+body  {
+	background: radial-gradient(circle, #1fac12, #0e869b);
+	width: 1885px;
+	height: 500px;
+	text-align: center;
+	background-color: #301934;
+  align-items: center;
+  justify-content: center;
+  }
+  
+
+  .btn {
+   display: inline-block;  
+   box-sizing: border-box;
+   padding: 0 25px;
+   margin: 0 15px 15px 0;
+   outline: none;
+   border: 1px solid #fff;
+   border-radius: 50px;
+   height: 46px;
+   line-height: 46px;
+   font-size: 14px;
+   font-weight: 600;
+   text-decoration: none;
+   color: #444;
+   background-color: #50ca3f;
+   box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+   cursor: pointer;
+   user-select: none;
+   appearance: none;
+   touch-action: manipulation;  
+   vertical-align: top;
+   transition: box-shadow 0.2s;
+  }
+  
+  
+  .btn:hover {
+   transition: all 0.2s;
+   box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+  }
+  
+  
+  .btn:active {
+   background-color: #808080;
+  }
+  
+  
+  .btn:disabled {
+   background-color: #ffffff;
+   border-color: #ffffff;
+   color: #ffffff;
+   cursor: not-allowed;
+  }
+  
+  
+  .header-h1 {
+   font-size: 70px;
+   font-weight: 600;
+   color: #ffffff;
+   text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, 0px 0px 20px #b393d3;
+  }
+  
+  
+  
+  .parent-container {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin: 25px;
+  }
+  
+  
+  .container {
+   background-color: rgba(80, 183, 197, 0.644);
+   border-radius: 12px;
+   width: 1000px;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  
+  .child-container {
+	 align-items: left;
+	 justify-content: left;
+	 border-radius: 12px; 
+  }
+  
+  
+  .footer {
+	  text-align: center;
+	  padding: 10px;
+	  background: rgb(22, 99, 54, 0.644);
+	  position: relative;
+	  bottom: 0;
+	  width: 99%;
+	  height: 50px;
+	  top: 1885px;
+  }
+  
+  .footer p {
+	 margin: 0;
+	 color: #f8ffff;
+	width: 300x;
+	height: 0px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	position:relative;
+	top: 15px;
+  }
+  
+  
+  .footer-text {
+	float: center;  
+	margin-right: 0px;
+  }
+  
+  .pictures1 {
+	width: 370px;
+  height: 125px;
+	position:relative;
+  margin-left: 300px;
+  border-radius: 10px;
+  border: 5px rgba(80, 183, 197, 0.644) solid;
+  box-shadow: 0 0 20px #444;
+
+  }
+  
+  .info {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, 0px 0px 20px #b393d3;
+  }
+
+  .parent-container1 {
+    display: flex;
+
+  }
+   
+  
+  .picture1inf {
+    display: flex;
+    margin-left: 350px;
+    margin-top: -210px;
+    border-radius: 10px;
+    border: 5px #ccc solid;
+    width:150px;
+    box-shadow: 0 0 20px #444;
+   }
+
+   .parent-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    margin-left: 400px;
+   }
+
+   .picture2inf {
+    display: flex;
+    margin-left: 350px;
+    margin-top: -210px;
+    border-radius: 10px;
+    border: 5px #ccc solid;
+    width:150px;
+    box-shadow: 0 0 20px #444;
+   }
+
+   .parent-container3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    margin-left: 400px;
+   }
+
+   .picture3inf {
+    display: flex;
+    margin-left: 350px;
+    margin-top: -210px;
+    border-radius: 10px;
+    border: 5px #ccc solid;
+    width:150px;
+    box-shadow: 0 0 20px #444;
+   }
+
+   .imgboard1 {
+    border: 5px #ccc solid;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 500px;
+    height: 150px;
+    box-shadow: 0 0 20px #444;   
+  }
+
+  .imgboard2 {
+    border: 5px #ccc solid;
+    width: 150px;
+    border-radius: 10px;
+    height: 150px;
+    box-shadow: 0 0 20px #444; 
+  }
+
+  .imgboard3 {
+    border: 5px #ccc solid;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 500px;
+    height: 150px;
+    box-shadow: 0 0 20px #444; 
+  }
+
+  .text1 {
+    margin-top: -200px;
+  }
+
+  .pct1 {
+  margin-top: -220px;
+  display: flex;
+  margin-left: 735px;
+  width: 383px;
+  border-radius: 12px;
+  border: 6px rgba(80, 183, 197, 0.644) solid;
+  box-shadow: 0 0 20px #444;
+  }
